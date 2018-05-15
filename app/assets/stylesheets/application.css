@@ -11,6 +11,7 @@
  * It is generally better to create a new file per style scope.
  *
  *= require indie_flower
+ *= require prism
  *= require bulma
  *= require_tree .
  *= require_self
