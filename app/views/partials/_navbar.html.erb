@@ -1,0 +1,41 @@
+<nav class="navbar is-transparent">
+  <div class="navbar-brand">
+    <a class="navbar-item" href = <%= root_path %> >
+      <h1> Mentee Checkpoint </h1>
+    </a>
+    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="navbarExampleTransparentExample" class="navbar-menu">
+    <div class="navbar-start">
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Assessments
+        </a>
+        <div class="navbar-dropdown is-boxed">
+          <a class="navbar-item" href="/assessments/javascript">
+            Javascript
+          </a>
+          <a class="navbar-item" href="/assessments/html_css">
+            HTML/CSS (under development)
+          </a>    
+        </div>
+      </div>
+    </div>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="field is-grouped">
+          <div class="navbar-item has-dropdown is-hoverable">
+            <span class="navbar-item"> <%= current_user.email %> </span>
+              <div class="navbar-dropdown is-boxed">
+                <%= link_to('Logout', destroy_user_session_path, method: :delete, class:'navbar-item')%>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</nav>
